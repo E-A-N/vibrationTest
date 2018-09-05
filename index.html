@@ -2,15 +2,20 @@
 <html>
 <head></head>
 
-<body> The phone should be vibrating!!
+<body> 
+  <div id="msg"> The phone should be vibrating!! </div>
   
     <script>
         var startVibes = function(){
+            var count = 0;
+            var mailbox = document.getElementById("msg");
             console.log(window.navigator.vibrate);
             console.log("Starting Vibes!!");
             var time = setInterval(function(){
+                count++;
                 navigator.vibrate([1000]);
                 console.log("Vibrate for 1 second through an array!!");
+                mailBox.innerHTML = The phone should be vibrating!! " +count+ " times!!"
             },2000);
         };
         window.onload = startVibes;
