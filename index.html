@@ -7,8 +7,8 @@
     <script>
         console.log(window.navigator.vibrate);
         var time = setInterval(function(){
-            navigator.vibrate(1000);
-            console.log("Vibrate for 1 second!!");
+            navigator.vibrate([1000]);
+            console.log("Vibrate for 1 second through an array!!");
         },2000);       
     </script>
   
